@@ -1,4 +1,5 @@
 import restauImage from "./img/restaurant.jpg";
+import loadMenu from "./menu";
 
 export default function loadHome() {
     const contentDiv = document.querySelector("#content");
@@ -12,6 +13,7 @@ export default function loadHome() {
     const callToAction = document.createElement("div");
     callToAction.classList.add("call-to-action");
     callToAction.innerHTML = '<button>Discover Our Menu</button>';
+    callToAction.addEventListener("click", loadMenu);
 
     const image = document.createElement("img");
     image.src = restauImage;

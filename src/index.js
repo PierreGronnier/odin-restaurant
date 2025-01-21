@@ -14,7 +14,5 @@ function setupTabs() {
 }
 
 loadHome();
-loadMenu();
-loadAbout();
 
 setupTabs();

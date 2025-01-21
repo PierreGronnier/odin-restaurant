@@ -9,15 +9,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: "Space Grotesk";
+    overflow-x: hidden; 
 }
 
 .background-image {
-    position: absolute;
+    position: fixed; 
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     object-fit: cover;
     filter: brightness(40%);
     z-index: -1;
@@ -25,7 +32,7 @@
 
 header {
     position: relative;
-    background-color: #00000099;
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 nav {
@@ -44,12 +51,9 @@ nav button {
     color: #ffffff;
     border-radius: 25px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0px 4px 6px #0000004d;
 }
 
 nav button:hover {
-    background-color: #ffffff33;
     color: #f0c808;
     border-color: #f0c808;
 }
@@ -59,7 +63,7 @@ nav button:hover {
     bottom: 15%;
     width: 100%;
     text-align: center;
-    color: white;
+    color: #ffffff;
 }
 
 .restaurant-name h1 {
@@ -78,7 +82,7 @@ nav button:hover {
 
 .call-to-action button {
     background-color: #9e8404;
-    color: white;
+    color: #ffffff;
     font-size: 1.2rem;
     padding: 0.8rem 2rem;
     border: none;
@@ -88,4 +92,72 @@ nav button:hover {
 
 .call-to-action button:hover {
     background-color: #f0c808;
+}
+
+.about-text {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 80%;
+    max-width: 800px;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.about-text .highlight {
+    color: #9e8404;
+    font-weight: bold;
+}
+
+.menu-container {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.menu-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #f0c808;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.menu-card {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.menu-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-bottom: 2px solid #f0c808;
+}
+
+.menu-card h3 {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+}
+
+.menu-card p {
+    font-size: 1rem;
+    line-height: 1.5;
 }
